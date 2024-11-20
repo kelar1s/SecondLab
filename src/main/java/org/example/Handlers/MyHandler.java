@@ -1,14 +1,17 @@
-package org.example;
+package org.example.Handlers;
+
+import org.example.CPU.MyCPU;
+import org.example.Task;
 
 public class MyHandler {
     MyHandler next;
 
-    MyHandler add(MyHandler _next){
+    public MyHandler add(MyHandler _next){
         next = _next;
         return _next;
     }
 
-    void Calculate(Task t, MyCPU c) throws Exception {
+    public void Calculate(Task t, MyCPU c) throws Exception {
         if(next != null){
             next.Calculate(t, c);
         }
